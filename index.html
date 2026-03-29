@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>iKey - Image Comparison</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="./images/logo.png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-eye-bg">
+      <img src="./images/eyebg.png" alt="" />
+    </div>
+    <div class="header-inner">
+      <div class="logo-image">
+        <a href="/">
+          <img src="./images/white-logo.png" alt="iKey" />
+        </a>
+      </div>
+      <span class="header-title">Image Comparison</span>
+    </div>
+  </header>
+
+  <!-- Wave separator -->
+  <div class="header-wave">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 L0,30 Q360,60 720,30 Q1080,0 1440,30 L1440,0 Z" fill="#2196d4"/>
+    </svg>
+  </div>
+
+  <!-- Main content -->
+  <section class="main-container">
+    <form id="imgForm">
+      <!-- Auth code -->
+      <div class="form-group auth-box">
+        <p class="warn-text active">Please fill in all fields!</p>
+        <input type="text" name="authCode" id="authCode" placeholder="Enter credential code" />
+      </div>
+
+      <!-- Drop zones -->
+      <div class="drop-container">
+        <div>
+          <div class="drop-zone drop-box0">
+            <span class="drop-zone__prompt active">Drop file here or click to upload</span>
+            <input type="file" name="image1" id="image1" accept="image/*" class="drop-zone__input drop-zone__input0" />
+          </div>
+          <button type="button" class="close-btn">&times;</button>
+          <div class="drop-label">Image 1</div>
+        </div>
+        <div>
+          <div class="drop-zone drop-box1">
+            <span class="drop-zone__prompt active">Drop file here or click to upload</span>
+            <input type="file" name="image2" id="image2" accept="image/*" class="drop-zone__input drop-zone__input1" />
+          </div>
+          <button type="button" class="close-btn">&times;</button>
+          <div class="drop-label">Image 2</div>
+        </div>
+      </div>
+
+      <!-- Processing indicator -->
+      <div class="processing-overlay" id="processingOverlay">
+        <img src="./images/iKey-image-processing.png" alt="Processing" />
+        <p class="processing-text">Analysing images...</p>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="meter">
+        <span data-progress="100" style="width:0;"></span>
+      </div>
+
+      <!-- Analysis result -->
+      <div class="result-section">
+        <h2 class="ikey-title">iKey Analysis</h2>
+        <p class="ikey-response"></p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="button-row">
+        <div class="form-group">
+          <input type="submit" name="submitBtn" id="submitBtn" value="Press to iKey" />
+        </div>
+        <div class="form-group">
+          <input type="button" name="resetBtn" id="resetBtn" value="Reset" />
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="./images/footerLogo.png" alt="iKey" />
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+      <span class="footer-text">iKey. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
